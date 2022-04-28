@@ -7,10 +7,10 @@ Created on Fri Apr 15 17:55:06 2022
 class DataConfig:
 
  def datafile(filename):    
-   if "5ycsv":
+   if "5ycsvM":
      output =  r'./data/all_races05_19.csv'
      return output
-   elif "ietsanders":
+   elif "5ycsvW":  r'.\data\all_races05_19.csv'
      output = "ietsanders"
      return "ouput"
    else:
