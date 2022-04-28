@@ -1,2 +1,1 @@
-# playingaround
-just playing around, how does it all work
+In this dir we safe the data files
