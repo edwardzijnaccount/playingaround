@@ -2,7 +2,7 @@
 """
 Created on Fri Apr 15 17:55:06 2022
 
-@author: RodenburgE1
+@author: Edward
 """
 class DataConfig:
 
