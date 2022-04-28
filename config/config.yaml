@@ -1,0 +1,6 @@
+---
+api_url: https://gorest.co.in/public/v2/users
+save_dir: /Users/dradecic/Desktop/users_data
+save_file: users.json
+test: file_test
+5ycsv: 'all_races05_19.csv'
