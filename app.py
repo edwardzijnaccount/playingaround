@@ -2,7 +2,7 @@
 """
 Created on Fri Apr 15 14:08:59 2022
 
-@author: RodenburgE1
+@author: Edward
 
 pd.Timedelta(np.timedelta64(1, "ms"))
 #df['fin_time']= pd.to_datetime(df['fin_time'], format='%H:%M:%S.%f')
