@@ -2,7 +2,7 @@
 """
 Created on Fri Apr 15 14:22:16 2022
 
-@author: RodenburgE1
+@author: Edward
 """
 from .ImportData import ImportData
 from .DataConfig import DataConfig
