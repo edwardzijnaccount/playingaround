@@ -8,10 +8,10 @@ class DataConfig:
 
  def datafile(filename):    
    if "5ycsvM":
-     output =  r'./data/all_races05_19.csv'
+     output =  r'../../data/all_races05_19.csv'
      return output
-   elif "5ycsvW":  r'.\data\all_races05_19.csv'
-     output = "ietsanders"
+   elif "5ycsvW":  
+     output = r'..\..\data\all_races05_19.csv'
      return "ouput"
    else:
      return "default thing"
