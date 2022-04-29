@@ -11,8 +11,10 @@ import lib.ImportConfData
 import pandas as pd
 import numpy as np
 
-#load the data
+
+#give source data the path to de source (add M for Mac path and W for Windows Path)
 source_data = lib.DataConfig.datafile("5ycsvM")
+
 #create dataframe from import data 
 df = lib.ImportData.import_csv(source_data)
 
@@ -48,7 +50,7 @@ df['fin_time']= pd.to_datetime(df['fin_time'], format='%M:%S.%f')
 df.info()
 
 #trying to make average in new column mean_time
-df['fin_time'].ewm().mean()
+#df['mean_tmp'] = df.groupby('horse_name')['fin_time_mic'].ewm(com=0).mean()
 #df['mean_tmp']=df.groupby('horse_name')['fin_time_mic'].transform(lambda x: x.ewm(alpha=0.30).mean())
 #df['std_tmp']=df.groupby('horse_name')['fin_time_mic'].transform(lambda x: x.ewm(alpha=0.30).std())
 
