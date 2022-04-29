@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 29 14:39:29 2022
+
+@author: edwardrodenburg
+"""
+
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr 15 14:08:59 2022
@@ -19,7 +27,7 @@ source_data = lib.DataConfig.datafile("5ycsvM")
 df = lib.ImportData.import_csv(source_data)
 
 #filter on dist = 3600 and select only column data horsename fin_time and dist.m
-df = df.loc[df['dist.m.'] == 3600].filter(['date','horse_name','fin_time','dist.m.'], axis=1)
+df = df.filter(['date','horse_name','fin_time','dist.m.'], axis=1)
 df['date'] = pd.to_datetime(df.date)
 
 #drop the nan spaces to block errors
@@ -40,6 +48,8 @@ df = df.assign(mic1 = lambda x: (x['min'] * 60 * 1000))
 df = df.assign(mic2 = lambda x: (x['sec'] * 1000))
 df['fin_time_mic'] = df['mic1'] + df['mic2'] + df['mic']
 
+df['fin_time_mdist'] = df['fin_time_mic'] / df['dist.m.']
+
 #cleanup and drop not neeted columns
 df.drop(columns=['secmic','mic','mic1','mic2','sec','min'], inplace = True)
 
@@ -47,12 +57,14 @@ df.drop(columns=['secmic','mic','mic1','mic2','sec','min'], inplace = True)
 df['fin_time']= pd.to_datetime(df['fin_time'], format='%M:%S.%f')
 
 #check dtype of fin_time_mic, is it  int?
-df.info()
+#df.info()
 
-#trying to make average in new column mean_time
-#df['mean_tmp'] = df.groupby('horse_name')['fin_time_mic'].ewm(com=0).mean()
-#df['mean_tmp']=df.groupby('horse_name')['fin_time_mic'].transform(lambda x: x.ewm(alpha=0.30).mean())
-#df['std_tmp']=df.groupby('horse_name')['fin_time_mic'].transform(lambda x: x.ewm(alpha=0.30).std())
+grouped_df = df.groupby('horse_name')['fin_time_mdist']
+mean_df = grouped_df.mean()
+mean_df = mean_df.reset_index()
+
+std_df = df.groupby(['horse_name'])['fin_time_mdist'].std()
 
 print(df)
-
+print(mean_df)
+print(std_df)
