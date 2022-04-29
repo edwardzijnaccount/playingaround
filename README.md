@@ -6,7 +6,7 @@
 In this project we we import horse race data and play around with it
 
 - Data formating
-- MonteC arlo 
+- MonteCarlo 
 - AI
 - ✨Magic ✨
 
@@ -51,15 +51,13 @@ GitProject
     /playingaround
 ```        
 
-
 ## Setup project
-
 
 | Project  | README |
 | ------ | ------ |
-| DataParsing | playingaround\README.MD
-| MonteCarlo  | playingaround\README.MD |
-| toekomst | toekomst |
+| DataParsing | playingaround\README.md |
+| MonteCarlo  | playingaround\README.md |
+| NOTEs | playingaround\NOTES.md |
 
 - for now just this project
 
