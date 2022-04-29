@@ -53,11 +53,13 @@ playingaround\
 ```
 
 The project asume there is a dir called data one map hire next to the git project so its smart to place this git clone in a dir with the setup
+
+```
 GitProject
     /data
         all_races05_19.csv
     /playingaround
-        
+```        
 
 
 ## what willcome
