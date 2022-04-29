@@ -51,12 +51,12 @@ GitProject
     /playingaround
 ```        
 
-## Setup project
+## Bron used
 
-| Project  | README |
+| Part of Project  | Source Used |
 | ------ | ------ |
-| DataParsing | playingaround\README.md |
-| MonteCarlo  | playingaround\README.md |
+| SourceData | https://www.kaggle.com/code/kerneler/starter-horse-racing-results-uk-c74173df-5/data |
+| MonteCarlo  | https://python-bloggers.com/2021/04/how-to-predict-the-position-of-runners-in-a-race/ |
 | NOTEs | playingaround\NOTES.md |
 
 - for now just this project
