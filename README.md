@@ -11,19 +11,9 @@ In this project we we import horse race data and play around with it
 - ✨Magic ✨
 
 ## Setup
-
-- willcome 
-
-> Some Quaote here to rembember how markdown works
-
-## Tech
-
-Dillinger uses a number of open source projects to work properly:
+For now just this project
 
 ## Installation
-
-
-
 Install the dependencies
 
 ```sh
@@ -62,12 +52,17 @@ GitProject
 ```        
 
 
-## what willcome
+## Setup project
 
 
 | Project  | README |
 | ------ | ------ |
-| MonteCarlo  | playingaround\REAME.MD |
+| DataParsing | playingaround\README.MD
+| MonteCarlo  | playingaround\README.MD |
 | toekomst | toekomst |
+
+- for now just this project
+
+> Random Happy Quote to rembemer how to put a quoate
 
 
